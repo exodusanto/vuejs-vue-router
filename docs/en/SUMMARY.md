@@ -29,6 +29,7 @@
     - [base](api/options.md#base)
     - [linkActiveClass](api/options.md#linkactiveclass)
     - [linkExactActiveClass](api/options.md#linkexactactiveclass)
+    - [linkExactPathActiveClass](api/options.md#linkexactpathactiveclass)
     - [scrollBehavior](api/options.md#scrollbehavior)
     - [parseQuery / stringifyQuery](api/options.md#parsequery--stringifyquery)
     - [fallback](api/options.md#fallback)

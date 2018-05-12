@@ -67,6 +67,16 @@
 
   Globally configure `<router-link>` default active class for exact matches. Also see [router-link](router-link.md).
 
+### linkExactPathActiveClass
+
+> 3.X.Y+
+
+- type: `string`
+
+- default: `"router-link-exact-path-active"`
+
+  Globally configure `<router-link>` default active class for exact path matches. Also see [router-link](router-link.md).
+
 ### scrollBehavior
 
 - type: `Function`
