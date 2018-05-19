@@ -79,7 +79,8 @@ export default {
 
     const attrs: any = { href }
 
-    if (getMatchedRouteExternal(route)) {
+    const external = getMatchedRouteExternal(route)
+    if (external) {
       on = {}
       const globalTarget = router.options.linkExternalTargetAttribute
       attrs.target = globalTarget == null
@@ -93,6 +94,7 @@ export default {
     const data: any = {
       class: classes
     }
+    let children = this.$slots.default
 
     if (this.tag === 'a') {
       data.on = on
@@ -111,10 +113,13 @@ export default {
       } else {
         // doesn't have <a> child, apply listener to self
         data.on = on
+        if (external) {
+          children = [h('a', { attrs }, this.$slots.default)]
+        }
       }
     }
 
-    return h(this.tag, data, this.$slots.default)
+    return h(this.tag, data, children)
   }
 }
 
